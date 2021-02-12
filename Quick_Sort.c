@@ -14,21 +14,21 @@ void quickSort(int* data, int start, int end) {
 	int temp;
 
 	while (i <= j) {
-		while (array[i] <= array[key]) {
+		while (data[i] <= data[key]) {
 			i++;
 		}
-		while (array[j] >= array[key] && j > start) {
+		while (data[j] >= data[key] && j > start) {
 			j--;
 		}
 		if (i > j) {
-			temp = array[j];
-			array[j] = array[key];
-			array[key] = temp;
+			temp = data[j];
+			data[j] = data[key];
+			data[key] = temp;
 		}
 		else {
 			temp = array[j];
-			array[j] = array[i];
-			array[i] = temp;
+			data[j] = data[i];
+			data[i] = temp;
 		}
 	}
 
